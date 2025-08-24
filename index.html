@@ -755,7 +755,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed"style="text-align:center; color:#011E60; font-weight:700; font-size:30px; margin-bottom:20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <button class="accordion-button collapsed" style="text-align:center; color:#011E60; font-weight:700; font-size:30px; margin-bottom:20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
               LA VISTA Ain Sokhna – لافيستا العين السخنة
             </button>
           </h2>
@@ -979,7 +979,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed"style="text-align:center; color:#011E60; font-weight:700; font-size:30px; margin-bottom:20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-3" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <button class="accordion-button collapsed"style="text-align:center; color:#011E60; font-weight:700; font-size:30px; margin-bottom:20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-3" aria-expanded="false" aria-controls="flush-3">
               LA VISTA North Coast – لافيستا الساحل الشمالي
             </button>
           </h2>
@@ -1204,7 +1204,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed"style="text-align:center; color:#011E60; font-weight:700; font-size:30px; margin-bottom:20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-4" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <button class="accordion-button collapsed"style="text-align:center; color:#011E60; font-weight:700; font-size:30px; margin-bottom:20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-4" aria-expanded="false" aria-controls="flush-4">
               LA VISTA El Shorouk – لافيستا الشروق
             </button>
           </h2>
@@ -1423,7 +1423,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed"style="text-align:center; color:#011E60; font-weight:700; font-size:30px; margin-bottom:20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-5" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <button class="accordion-button collapsed"style="text-align:center; color:#011E60; font-weight:700; font-size:30px; margin-bottom:20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-5" aria-expanded="false" aria-controls="flush-5">
               LA VISTA 6th Of October – لافيستا السادس من أكتوبر
             </button>
           </h2>
@@ -1660,23 +1660,23 @@
             
             <li style="margin-bottom:10px; font-size:16px; font-weight:500;">
               <i class="bi bi-chevron-right" style="margin-left:6px; color:#ffffff;"></i>
-              <a href="#vista-october" style="text-decoration:none; color:#ffffff;">LA VISTA 6th Of October</a>
+              <a href="#flush-5" style="text-decoration:none; color:#ffffff;">LA VISTA 6th Of October</a>
             </li>
             <li style="margin-bottom:10px; font-size:16px; font-weight:500;">
               <i class="bi bi-chevron-right" style="margin-left:6px; color:#ffffff;"></i>
-              <a href="#vista-newcairo" style="text-decoration:none; color:#ffffff;">LA VISTA New Cairo</a>
+              <a href="#flush-collapseOne" style="text-decoration:none; color:#ffffff;">LA VISTA New Cairo</a>
             </li>
             <li style="margin-bottom:10px; font-size:16px; font-weight:500;">
               <i class="bi bi-chevron-right" style="margin-left:6px; color:#ffffff;"></i>
-              <a href="#vista-ainsokhna" style="text-decoration:none; color:#ffffff;">LA VISTA Ain Sokhna</a>
+              <a href="#flush-collapseTwo" style="text-decoration:none; color:#ffffff;">LA VISTA Ain Sokhna</a>
             </li>
             <li style="margin-bottom:10px; font-size:16px; font-weight:500;">
               <i class="bi bi-chevron-right" style="margin-left:6px; color:#ffffff;"></i>
-              <a href="#vista-northcoast" style="text-decoration:none; color:#ffffff;">LA VISTA North Coast</a>
+              <a href="#flush-3" style="text-decoration:none; color:#ffffff;">LA VISTA North Coast</a>
             </li>
             <li style="margin-bottom:10px; font-size:16px; font-weight:500;">
               <i class="bi bi-chevron-right" style="margin-left:6px; color:#ffffff;"></i>
-              <a href="#vista-shorouk" style="text-decoration:none; color:#ffffff;">LA VISTA El Shorouk</a>
+              <a href="#flush-4" style="text-decoration:none; color:#ffffff;">LA VISTA El Shorouk</a>
             </li>
           </ul>
         </div>
@@ -1729,7 +1729,59 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
+  <script>
+    // Wait for the page to load
+    document.addEventListener("DOMContentLoaded", function () {
+      // Check if the URL has a hash (e.g. #vista-newcairo)
+      const hash = window.location.hash;
+  
+      if (hash) {
+        // Find the matching collapse element
+        const targetCollapse = document.querySelector(hash + '.accordion-collapse');
+  
+        if (targetCollapse) {
+          // Use Bootstrap's Collapse API to open it
+          const collapse = new bootstrap.Collapse(targetCollapse, {
+            toggle: true // This will show it if closed
+          });
+  
+          // Optional: Smooth scroll to the accordion header
+          const accordionHeader = targetCollapse.previousElementSibling?.querySelector('.accordion-button');
+          if (accordionHeader) {
+            setTimeout(() => {
+              accordionHeader.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100); // Small delay to allow expand before scroll
+          }
+        }
+      }
+  
+      // Optional: Handle clicks on footer links (in case they don't reload the page)
+      document.querySelectorAll('a[href^="#flush-"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          const targetCollapse = document.querySelector(targetId + '.accordion-collapse');
+  
+          if (targetCollapse) {
+            e.preventDefault();
+  
+            // Expand the accordion
+            const collapse = new bootstrap.Collapse(targetCollapse, { toggle: true });
+  
+            // Update URL
+            window.location.hash = targetId;
+  
+            // Scroll to the header
+            const accordionHeader = targetCollapse.previousElementSibling?.querySelector('.accordion-button');
+            if (accordionHeader) {
+              setTimeout(() => {
+                accordionHeader.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }, 300); // Wait for collapse animation to start
+            }
+          }
+        });
+      });
+    });
+  </script>
   <!-- Vendor JS Files -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
