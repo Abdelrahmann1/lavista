@@ -918,6 +918,13 @@ section,
   .mobile-no-padd h4 {
     font-size: 15px !important;
   }
+  .accordion{
+    padding:0 !important ;
+  }
+  .accordion-button{
+    font-size: 21px !important;
+
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2142,5 +2149,12 @@ body {
   font-size: 14px;
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.accordion{
+  padding: 1px 9%;
+}
+.accordion-button{
+  display: flex;
   flex-direction: row-reverse;
 }
