@@ -118,48 +118,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Reusable function to show Bootstrap alert
 async function handleSubmit(e, sheet) {
   e.preventDefault();
+  const form = e.target; // The form element
+  const name = form.name.value.trim(); // Assuming your input has name="name"
+  const phone = form.phone.value.trim(); // Assuming your input has name="phone"
 
-  let name, phone;
-  let nameInput, phoneInput;
+  // Now you can use name and phone (e.g., log, validate, send to sheet)
+  // console.log('Name:', name);
+  // console.log('Phone:', phone);
+  // let name, phone;
+  // let nameInput, phoneInput;
+  
+  // // Select inputs based on sheet
+  // if (sheet === "tajcity") {
+  //   nameInput = document.getElementById("name_tajcity");
+  //   phoneInput = document.getElementById("phone_tajcity");
+  //   name = nameInput.value;
+  //   phone = phoneInput.value;
+  // } else if (sheet === "talala") {
+  //   nameInput = document.getElementById("name_talala");
+  //   phoneInput = document.getElementById("phone_talala");
+  //   name = nameInput.value;
+  //   phone = phoneInput.value;
+  // } else if (sheet === "thebutterfly") {
+  //   nameInput = document.getElementById("name_thebutterfly");
+  //   phoneInput = document.getElementById("phone_thebutterfly");
+  //   name = nameInput.value;
+  //   phone = phoneInput.value;
+  // } else if (sheet === "sarai") {
+  //   nameInput = document.getElementById("name_sarai");
+  //   phoneInput = document.getElementById("phone_sarai");
+  //   name = nameInput.value;
+  //   phone = phoneInput.value;
+  // } else if (sheet === "mnhd all") {
+  //   nameInput = document.getElementById("name_sheet1");
+  //   phoneInput = document.getElementById("phone_sheet1");
+  //   name = nameInput.value;
+  //   phone = phoneInput.value;
+  // } else {
+  //   showAlert("Unknown city/sheet: " + sheet, "danger");
+  //   return;
+  // }
 
-  // Select inputs based on sheet
-  if (sheet === "tajcity") {
-    nameInput = document.getElementById("name_tajcity");
-    phoneInput = document.getElementById("phone_tajcity");
-    name = nameInput.value;
-    phone = phoneInput.value;
-  } else if (sheet === "talala") {
-    nameInput = document.getElementById("name_talala");
-    phoneInput = document.getElementById("phone_talala");
-    name = nameInput.value;
-    phone = phoneInput.value;
-  } else if (sheet === "thebutterfly") {
-    nameInput = document.getElementById("name_thebutterfly");
-    phoneInput = document.getElementById("phone_thebutterfly");
-    name = nameInput.value;
-    phone = phoneInput.value;
-  } else if (sheet === "sarai") {
-    nameInput = document.getElementById("name_sarai");
-    phoneInput = document.getElementById("phone_sarai");
-    name = nameInput.value;
-    phone = phoneInput.value;
-  } else if (sheet === "mnhd all") {
-    nameInput = document.getElementById("name_sheet1");
-    phoneInput = document.getElementById("phone_sheet1");
-    name = nameInput.value;
-    phone = phoneInput.value;
-  } else {
-    showAlert("Unknown city/sheet: " + sheet, "danger");
-    return;
-  }
-
-  // Validate inputs
+  // // Validate inputs
   if (!name || !phone) {
     showAlert("الرجاء إدخال الاسم ورقم الهاتف.", "warning");
     return;
   }
 
-  // Show progress bar
+  // // Show progress bar
   const progressContainer = document.getElementById("progressContainer");
   progressContainer.classList.remove("d-none");
 
