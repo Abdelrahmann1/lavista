@@ -186,8 +186,8 @@ async function handleSubmit(e, sheet) {
     const result = await response.json();
 
     if (result.success) {
-      nameInput.value = "";
-      phoneInput.value = "";
+      name.value = "";
+      phone.value = "";
       showAlert("شكراً لك! تم إرسال بياناتك بنجاح.", "success");
       setTimeout(() => {
         window.location.href = 'thank_you.html';
