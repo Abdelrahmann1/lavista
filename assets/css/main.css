@@ -2180,3 +2180,9 @@ body {
   bottom: 20px;
   background-color: #ce2934;
 }
+
+.logo-container img {
+  width: 170px;
+  height: auto;
+  object-fit: contain; /* أو cover حسب المطلوب */
+}
