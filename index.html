@@ -38,42 +38,53 @@
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-      <nav style="display:flex; justify-content:flex-end; align-items:center;">
-        <img src="assets/img/logo (2).webp" loading="lazy" alt="Logo" style="width:150px;">
-      </nav>
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
+    <!-- Logo inside link (على اليمين) -->
+    <a href="index.html" class="logo d-flex align-items-center order-1">
+      <img src="assets/img/logo (2).webp" loading="lazy" alt="Logo - الصفحة الرئيسية" style="width:150px;">
+    </a>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+    <!-- Navigation Menu (يجي في النص) -->
+    <nav id="navmenu" class="navmenu order-2">
+      <ul class="d-flex">
+        <li>
+          <a href="#hero" class="active"
+             style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600;">
+             الرئيسية
+          </a>
+        </li>
+        <li>
+          <a href="#about"
+             style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600;">
+             من نحن
+          </a>
+        </li>
+        <li>
+          <a href="#features"
+             style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600;">
+             مشاريعنا
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/201050564000" target="_blank" aria-label="تواصل معنا عبر واتساب"
+             style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600; color:#fff; text-decoration:none;">
+             تواصل معنا
+          </a>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="فتح القائمة"></i>
+    </nav>
 
+    <!-- CTA Button (على الشمال) -->
+    <a class="cta-btn order-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
+       style="font-family: 'Cairo', sans-serif; font-size:16px; font-weight:700;">
+       ابدأ تسجيل
+    </a>
 
-      </a>
+  </div>
+</header>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active"
-              style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600;">الرئيسية</a></li>
-          <li><a href="#about" style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600;">من نحن</a>
-          </li>
-          <li><a href="#features"
-              style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600;">مشاريعنا</a>
-          </li>
-          <li>
-            <a href="https://wa.me/201050564000" target="_blank"
-              style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600; color:#fff; text-decoration:none;">
-              تواصل معنا
-            </a>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="cta-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
-        style="font-family: 'Cairo', sans-serif; font-size:16px; font-weight:700;">ابدأ تسجيل</a>
-
-
-    </div>
-  </header>
 
   <main class="main">
 
@@ -1764,7 +1775,7 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-4 footer-links">
-          <h3 >
+          <h3>
             La Vista Development
           </h3>
           <p style="
@@ -1777,8 +1788,8 @@
             أن نكون رواد السوق من خلال تقديم أعلى جودة من خدمات التصميم والتشطيب والمناظر الطبيعية والتشغيل بشكل
             مستمر، مع تحقيق أعلى عائد على الاستثمار.
           </p>
-          <div class="text-center mt-4" >
-            © 2025 <strong >la-vistadevlopment
+          <div class="text-center mt-4">
+            © 2025 <strong>la-vistadevlopment
             </strong>. جميع الحقوق محفوظة.
           </div>
 
@@ -1787,7 +1798,7 @@
 
 
         </div>
-        
+
 
 
       </div>
