@@ -43,6 +43,62 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       // لا حاجة لـ preventDefault في الحالة دي
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if the URL has a hash (e.g. #vista-newcairo)
+  const hash = window.location.hash;
+
+  if (hash) {
+    // Find the matching collapse element
+    const targetCollapse = document.querySelector(hash + '.accordion-collapse');
+
+    if (targetCollapse) {
+      // Use Bootstrap's Collapse API to open it
+      const collapse = new bootstrap.Collapse(targetCollapse, {
+        toggle: true // This will show it if closed
+      });
+
+      // Optional: Smooth scroll to the accordion header
+      const accordionHeader = targetCollapse.previousElementSibling?.querySelector('.accordion-button');
+      if (accordionHeader) {
+        setTimeout(() => {
+          accordionHeader.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100); // Small delay to allow expand before scroll
+      }
+    }
+  }
+
+  // Optional: Handle clicks on footer links (in case they don't reload the page)
+  document.querySelectorAll('a[href^="#flush-"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      const targetCollapse = document.querySelector(targetId + '.accordion-collapse');
+
+      if (targetCollapse) {
+        e.preventDefault();
+
+        // Expand the accordion
+        const collapse = new bootstrap.Collapse(targetCollapse, { toggle: true });
+
+        // Update URL
+        window.location.hash = targetId;
+
+        // Scroll to the header
+        const accordionHeader = targetCollapse.previousElementSibling?.querySelector('.accordion-button');
+        if (accordionHeader) {
+          setTimeout(() => {
+            accordionHeader.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 300); // Wait for collapse animation to start
+        }
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+    keyboard: false     // المستخدم مش هيقدر يقفل المودال بزر Escape
+  });
+  myModal.show(); // عرض المودال عند فتح الصفحة
+});
 // function handleSubmit(e, sheet) {
 //   e.preventDefault();
 //   let name, phone;
@@ -245,9 +301,6 @@ function showAlert(message, type) {
 (function() {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
@@ -328,79 +381,73 @@ function showAlert(message, type) {
   /**
    * Animation on scroll function and init
    */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
+  // function aosInit() {
+  //   AOS.init({
+  //     duration: 600,
+  //     easing: 'ease-in-out',
+  //     once: true,
+  //     mirror: false
+  //   });
+  // }
+  // window.addEventListener('load', aosInit);
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+
 
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
 
   /**
    * Init swiper sliders
    */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
+  // function initSwiper() {
+  //   document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+  //     let config = JSON.parse(
+  //       swiperElement.querySelector(".swiper-config").innerHTML.trim()
+  //     );
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
+  //     if (swiperElement.classList.contains("swiper-tab")) {
+  //       initSwiperWithCustomPagination(swiperElement, config);
+  //     } else {
+  //       new Swiper(swiperElement, config);
+  //     }
+  //   });
+  // }
 
-  window.addEventListener("load", initSwiper);
+  // window.addEventListener("load", initSwiper);
 
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+  // document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  //   let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+  //   let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+  //   let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-    });
+  //   let initIsotope;
+  //   imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+  //     initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+  //       itemSelector: '.isotope-item',
+  //       layoutMode: layout,
+  //       filter: filter,
+  //       sortBy: sort
+  //     });
+  //   });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
+  //   isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
+  //     filters.addEventListener('click', function() {
+  //       isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+  //       this.classList.add('filter-active');
+  //       initIsotope.arrange({
+  //         filter: this.getAttribute('data-filter')
+  //       });
+  //       if (typeof aosInit === 'function') {
+  //         aosInit();
+  //       }
+  //     }, false);
+  //   });
 
-  });
+  // });
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.

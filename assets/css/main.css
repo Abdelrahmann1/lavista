@@ -440,7 +440,7 @@ h6 {
   }
 
   .navmenu ul {
-    display: none;
+    display: none ;
     list-style: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
@@ -453,6 +453,8 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
+    height: fit-content;
+
   }
 
   .navmenu a,
@@ -787,6 +789,9 @@ h6 {
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
+  }
+  .navmenu a, .navmenu a:focus {
+    color: var(--nav-color);
   }
 }
 
@@ -2041,6 +2046,9 @@ body {
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
+  .d-lg-none{
+    display: block !important;
+  }
   .form-container {
     padding: 5px;
   }

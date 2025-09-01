@@ -15,11 +15,11 @@
   <link href="assets/img/apple-touch-icon.png" loading="lazy" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <!-- <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"> -->
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -51,7 +51,7 @@
 
       <!-- Navigation Menu (يجي في النص) -->
       <nav id="navmenu" class="navmenu order-2">
-        <ul class="d-flex">
+        <ul >
           <li>
             <a href="#hero" class="active" style="font-family: 'Cairo', sans-serif; font-size:15px; font-weight:600;">
               الرئيسية
@@ -116,7 +116,7 @@
     
         <!-- Mobile: Image 1 -->
         <div class="d-lg-none mb-4 text-center">
-          <img src="assets/img/favicon.png" class="img-fluid rounded-4" loading="lazy" alt="لافيستا">
+          <img src="assets/img/about1.webp" class="img-fluid rounded-4" loading="lazy" alt="لافيستا">
         </div>
     
         <div class="row gy-4">
@@ -1788,65 +1788,11 @@
   <div id="preloader"></div>
   <script>
     // Wait for the page to load
-    document.addEventListener("DOMContentLoaded", function () {
-      // Check if the URL has a hash (e.g. #vista-newcairo)
-      const hash = window.location.hash;
 
-      if (hash) {
-        // Find the matching collapse element
-        const targetCollapse = document.querySelector(hash + '.accordion-collapse');
-
-        if (targetCollapse) {
-          // Use Bootstrap's Collapse API to open it
-          const collapse = new bootstrap.Collapse(targetCollapse, {
-            toggle: true // This will show it if closed
-          });
-
-          // Optional: Smooth scroll to the accordion header
-          const accordionHeader = targetCollapse.previousElementSibling?.querySelector('.accordion-button');
-          if (accordionHeader) {
-            setTimeout(() => {
-              accordionHeader.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 100); // Small delay to allow expand before scroll
-          }
-        }
-      }
-
-      // Optional: Handle clicks on footer links (in case they don't reload the page)
-      document.querySelectorAll('a[href^="#flush-"]').forEach(link => {
-        link.addEventListener('click', function (e) {
-          const targetId = this.getAttribute('href');
-          const targetCollapse = document.querySelector(targetId + '.accordion-collapse');
-
-          if (targetCollapse) {
-            e.preventDefault();
-
-            // Expand the accordion
-            const collapse = new bootstrap.Collapse(targetCollapse, { toggle: true });
-
-            // Update URL
-            window.location.hash = targetId;
-
-            // Scroll to the header
-            const accordionHeader = targetCollapse.previousElementSibling?.querySelector('.accordion-button');
-            if (accordionHeader) {
-              setTimeout(() => {
-                accordionHeader.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }, 300); // Wait for collapse animation to start
-            }
-          }
-        });
-      });
-    });
   </script>
   <!-- Vendor JS Files -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
-        keyboard: false     // المستخدم مش هيقدر يقفل المودال بزر Escape
-      });
-      myModal.show(); // عرض المودال عند فتح الصفحة
-    });
+
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
