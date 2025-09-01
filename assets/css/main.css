@@ -1877,9 +1877,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 body {
   background-color: #ffebee;
@@ -2306,4 +2303,10 @@ body {
   font-size: 22px;
   position: absolute;
   right: 0;
+}
+
+.feature-icon {
+  font-size: 40px;   /* increase size */
+  font-weight: 900;  /* bold */
+  color: #011E60;       /* optional: make sure it looks bold */
 }
