@@ -252,8 +252,11 @@ h6 {
   text-transform: uppercase;
   border: 2px solid var(--contrast-color);
   cursor: pointer;
+  text-wrap: nowrap;
 }
-
+.header .logo {
+  display: none !important;
+}
 .header .cta-btn:hover,
 .header .cta-btn:focus:hover {
   color: var(--contrast-color);
@@ -293,7 +296,9 @@ h6 {
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
-    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
   }
 
   .navmenu ul {
