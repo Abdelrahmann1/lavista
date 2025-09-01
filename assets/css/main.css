@@ -1,4 +1,3 @@
-
 :root {
   --default-font: "Cairo", "Roboto", system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -9,22 +8,34 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #273d4e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #011E60; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #444444;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #273d4e;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #011E60;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #e5eaee; /* The default color of the main navmenu links */
-  --nav-hover-color: #ff4a17; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: transparent; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ff4a17; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #e5eaee;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ff4a17;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: transparent;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ff4a17;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -134,10 +145,8 @@ h6 {
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(
-    var(--accent-color) 50%,
-    color-mix(in srgb, var(--accent-color), transparent 75%) 52%
-  );
+  background: radial-gradient(var(--accent-color) 50%,
+      color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -254,9 +263,11 @@ h6 {
   cursor: pointer;
   text-wrap: nowrap;
 }
+
 .header .logo {
   display: none !important;
 }
+
 .header .cta-btn:hover,
 .header .cta-btn:focus:hover {
   color: var(--contrast-color);
@@ -313,12 +324,12 @@ h6 {
     position: relative;
   }
 
-  .navmenu > ul > li {
+  .navmenu>ul>li {
     white-space: nowrap;
     padding: 15px 14px;
   }
 
-  .navmenu > ul > li:last-child {
+  .navmenu>ul>li:last-child {
     padding-right: 0;
   }
 
@@ -346,7 +357,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu > ul > li > a:before {
+  .navmenu>ul>li>a:before {
     content: "";
     position: absolute;
     height: 2px;
@@ -359,13 +370,13 @@ h6 {
   }
 
   .navmenu a:hover:before,
-  .navmenu li:hover > a:before,
+  .navmenu li:hover>a:before,
   .navmenu .active:before {
     visibility: visible;
     width: 100%;
   }
 
-  .navmenu li:hover > a,
+  .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
     color: color-mix(in srgb, var(--nav-color) 90%, white 15%);
@@ -404,11 +415,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover > a {
+  .navmenu .dropdown ul li:hover>a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover > ul {
+  .navmenu .dropdown:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -420,7 +431,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover > ul {
+  .navmenu .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -445,7 +456,7 @@ h6 {
   }
 
   .navmenu ul {
-    display: none ;
+    display: none;
     list-style: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
@@ -524,7 +535,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown > .dropdown-active {
+  .navmenu .dropdown>.dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -551,7 +562,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu > ul {
+  .mobile-nav-active .navmenu>ul {
     display: block;
   }
 }
@@ -568,8 +579,7 @@ h6 {
 
 .footer .footer-top {
   padding-top: 50px;
-  border-top: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .footer-about .logo {
@@ -707,8 +717,7 @@ h6 {
 
 .footer .copyright {
   padding: 25px 0;
-  border-top: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -795,7 +804,9 @@ h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
-  .navmenu a, .navmenu a:focus {
+
+  .navmenu a,
+  .navmenu a:focus {
     color: var(--nav-color);
   }
 }
@@ -838,11 +849,11 @@ h6 {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li + li {
+.page-title .breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li + li::before {
+.page-title .breadcrumbs ol li+li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -862,6 +873,7 @@ section,
 }
 
 @media (max-width: 1199px) {
+
   section,
   .section {
     scroll-margin-top: 76px;
@@ -910,16 +922,20 @@ section,
   .section-title p {
     font-size: 24px;
   }
+
   .mobile-no-padd {
     padding: 0 !important;
   }
+
   .mobile-no-padd h4 {
     font-size: 15px !important;
   }
-  .accordion{
-    padding:0 !important ;
+
+  .accordion {
+    padding: 0 !important;
   }
-  .accordion-button{
+
+  .accordion-button {
     font-size: 21px !important;
 
   }
@@ -1215,17 +1231,19 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   padding: 15px 20px;
   transition: 0.3s;
-  border-radius: 0;
+  border-radius: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   height: 100%;
+  padding: 10px;
 }
 
 .features .nav-link i {
   padding-right: 15px;
   font-size: 48px;
+  padding-top: 10%;
 }
 
 .features .nav-link h4 {
@@ -1740,20 +1758,14 @@ section,
   position: relative;
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: color-mix(in srgb, var(--default-color), transparent 85%);
   opacity: 1;
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
 }
 
@@ -1768,8 +1780,7 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .portfolio-details .portfolio-info ul {
@@ -1778,7 +1789,7 @@ section,
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -1811,8 +1822,7 @@ section,
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
-  border-left: 3px solid
-    color-mix(in srgb, var(--default-color), transparent 70%);
+  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
   margin: 20px 0;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: 0.3s;
@@ -1870,19 +1880,23 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
 body {
   background-color: #ffebee;
 }
+
 .card {
   width: 400px;
   background-color: #fff;
   border: none;
   border-radius: 12px;
 }
+
 label.radio {
   cursor: pointer;
   width: 100%;
 }
+
 label.radio input {
   position: absolute;
   top: 0;
@@ -1890,6 +1904,7 @@ label.radio input {
   visibility: hidden;
   pointer-events: none;
 }
+
 label.radio span {
   padding: 7px 14px;
   border: 2px solid #eee;
@@ -1900,7 +1915,8 @@ label.radio span {
   height: 48px;
   line-height: 27px;
 }
-label.radio input:checked + span {
+
+label.radio input:checked+span {
   border-color: #039be5;
   background-color: #81d4fa;
   color: #fff;
@@ -1908,28 +1924,34 @@ label.radio input:checked + span {
   height: 48px;
   line-height: 27px;
 }
+
 .form-control {
   margin-top: 10px;
   height: 48px;
   border: 2px solid #eee;
   border-radius: 10px;
 }
+
 .form-control:focus {
   box-shadow: none;
   border: 2px solid #039be5;
 }
+
 .agree-text {
   font-size: 12px;
 }
+
 .terms {
   font-size: 12px;
   text-decoration: none;
   color: #039be5;
 }
+
 .confirm-button {
   height: 50px;
   border-radius: 10px;
 }
+
 body {
   font-family: "Cairo", sans-serif;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -2051,19 +2073,23 @@ body {
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
-  .d-lg-none{
+  .d-lg-none {
     display: block !important;
   }
+
   .form-container {
     padding: 5px;
   }
+
   .foot-navs {
     display: flex;
     justify-content: space-between;
   }
+
   .footer .footer-links {
     width: fit-content;
   }
+
   .form-wrapper {
     padding: 20px 15px;
     border-radius: 0;
@@ -2105,18 +2131,21 @@ body {
 
   .form-control {
     padding: 12px;
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
+    /* Prevents zoom on iOS */
   }
 }
 
 #progressContainer {
   /* display: none;  */
-  position: fixed !important; /* ✅ Key: fixed = screen overlay */
+  position: fixed !important;
+  /* ✅ Key: fixed = screen overlay */
   top: -20px;
   left: 0;
   width: 100vw;
   height: 102vh;
-  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Semi-transparent black */
   z-index: 99999;
   display: flex;
   justify-content: center;
@@ -2127,7 +2156,8 @@ body {
 }
 
 #progressContainer.visible {
-  display: flex !important; /* Show when class 'visible' is added */
+  display: flex !important;
+  /* Show when class 'visible' is added */
 }
 
 #progressContainer .spinner-border {
@@ -2136,6 +2166,7 @@ body {
   border: 4px solid rgba(255, 255, 255, 0.3);
   border-left-color: #fff;
 }
+
 #alertContainer {
   position: fixed;
   bottom: 20px;
@@ -2143,6 +2174,7 @@ body {
   z-index: 10000;
   width: 350px;
 }
+
 #alertContainer .alert {
   margin-bottom: 10px;
   max-width: 350px;
@@ -2152,13 +2184,16 @@ body {
   justify-content: space-between;
   flex-direction: row-reverse;
 }
-.accordion{
+
+.accordion {
   padding: 1px 9%;
 }
-.accordion-button{
+
+.accordion-button {
   display: flex;
   flex-direction: row-reverse;
 }
+
 /* الأساسيات المشتركة بين الأزرار */
 .floating-btn {
   position: fixed;
@@ -2172,7 +2207,7 @@ body {
   color: white;
   font-size: 26px;
   text-decoration: none;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: transform 0.2s ease-in-out;
 }
@@ -2197,8 +2232,10 @@ body {
 .logo-container img {
   width: 170px;
   height: auto;
-  object-fit: contain; /* أو cover حسب المطلوب */
+  object-fit: contain;
+  /* أو cover حسب المطلوب */
 }
+
 /* قسم المميزات */
 #features {
   padding: 40px 0;
@@ -2223,6 +2260,7 @@ body {
   font-size: 14px;
   color: #555;
 }
+
 /* العناوين */
 .about-title {
   direction: rtl;
