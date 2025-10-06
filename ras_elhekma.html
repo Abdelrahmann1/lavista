@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="اكتشف تجربة لافيستا السكنية الفريدة في العاصمة الإدارية الجديدة والعين السخنة والساحل الشمالي — مشاريع متكاملة من لافيستا للتطوير العقاري تجمع بين الرفاهية، الموقع الاستراتيجي، والخدمات المتكاملة.">
+  <title>لافيستا: تجربة سكنية فريدة في قلب العاصمة الإدارية الجديدة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #011E60;
+      --primary-light: #023399;
+      --accent: #2A5B87;
+      --light: #f8fbff;
+      --white: #ffffff;
+      --gray: #777;
+      --dark: #222;
+      --shadow: 0 10px 30px rgba(1, 30, 96, 0.12);
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Back Button */
+    .back-btn {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .back-btn a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 1.05rem;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 70vh;
+      background: linear-gradient(rgba(1, 30, 96, 0.75), rgba(1, 30, 96, 0.85)), url('https://la-vistaproperties.com/assets/img/projects/city.webp') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      border-radius: 0 0 40px 40px;
+      margin-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    /* Section */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 2.1rem;
+      color: var(--primary);
+      margin-bottom: 40px;
+      position: relative;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .text-block {
+      max-width: 850px;
+      margin: 0 auto 30px;
+      font-size: 1.12rem;
+      line-height: 1.8;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(1, 30, 96, 0.2);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content h3 {
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    /* Features */
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature-item {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border-top: 3px solid var(--primary);
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 30px;
+      margin: 70px 0;
+    }
+
+    .cta-section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 25px;
+      font-weight: 800;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 16px 48px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      margin-top: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--gray);
+      font-size: 1rem;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.1rem; }
+      .hero p { font-size: 1.1rem; }
+      .section-title { font-size: 1.8rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div>
+      <h1>لافيستا: تجربة سكنية فريدة</h1>
+      <p>في قلب العاصمة الإدارية الجديدة، العين السخنة، والساحل الشمالي</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Back Button -->
+    <div class="back-btn">
+      <a href="https://la-vistaproperties.com">← العودة إلى الرئيسية</a>
+    </div>
+
+    <!-- Intro -->
+    <section>
+      <h2 class="section-title">مقدمة</h2>
+      <p class="text-block">
+        تعتبر شركة لافيستا للتطوير العقاري واحدة من الشركات الرائدة في مجال العقارات في مصر، حيث تقدم مجموعة متنوعة من المشاريع السكنية التي تلبي احتياجات جميع العملاء. من بين هذه المشاريع، يبرز كمبوند لافيستا، الذي يُعد وجهة مميزة للراغبين في العيش في بيئة هادئة ومريحة.
+      </p>
+    </section>
+
+    <!-- Location -->
+    <section style="background: white; border-radius: 24px; padding: 60px;">
+      <h2 class="section-title">موقع لافيستا</h2>
+      <p class="text-block">
+        يقع كمبوند لافيستا في موقع استراتيجي بالقرب من العديد من الطرق والمحاور الرئيسية، مما يسهل الوصول إلى مختلف مناطق القاهرة. يتميز <strong>لافيستا سيتي</strong> بموقعه في العاصمة الإدارية الجديدة، حيث يبعد أقل من 10 دقائق عن الطريق الدائري، مما يجعله الخيار المثالي للراغبين في العيش بالقرب من المرافق الحيوية.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="section-title">مشاريع شركة لافيستا</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://la-vistaproperties.com/assets/img/projects/city.webp" alt="لافيستا سيتي" class="project-img">
+          <div class="project-content">
+            <h3>لافيستا سيتي</h3>
+            <p>أبرز مشاريع الشركة في العاصمة الإدارية الجديدة، يضم وحدات سكنية متنوعة تناسب جميع الاحتياجات.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://la-vistaproperties.com/assets/img/projects/gardens.webp" alt="لافيستا راس الحكمة" class="project-img">
+          <div class="project-content">
+            <h3>لافيستا راس الحكمة</h3>
+            <p>مشروع ساحلي على البحر المتوسط، وجهة مثالية لقضاء العطلات والاستثمار.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://la-vistaproperties.com/assets/img/projects/city.webp" alt="لافيستا باي إيست" class="project-img">
+          <div class="project-content">
+            <h3>لافيستا باي إيست</h3>
+            <p>قرية سياحية على الساحل الشمالي، توفر خدمات ومرافق ترفيهية متكاملة.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://la-vistaproperties.com/assets/img/projects/gardens.webp" alt="لافيستا جاردنز" class="project-img">
+          <div class="project-content">
+            <h3>لافيستا جاردنز – العين السخنة</h3>
+            <p>واحدة من أبرز القرى السياحية في العين السخنة، بإطلالات بحرية مباشرة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section>
+      <h2 class="section-title">مميزات كمبوند لافيستا</h2>
+      <div class="features-list">
+        <div class="feature-item">
+          <h3>تصميم معماري مبتكر</h3>
+        </div>
+        <div class="feature-item">
+          <h3>مساحات خضراء واسعة</h3>
+        </div>
+        <div class="feature-item">
+          <h3>خدمات متكاملة</h3>
+        </div>
+        <div class="feature-item">
+          <h3>أمن وحراسة 24/7</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lavista 6 -->
+    <section style="background: white; border-radius: 24px; padding: 60px;">
+      <h2 class="section-title">لافيستا 6</h2>
+      <p class="text-block">
+        يُعتبر لافيستا 6 واحدًا من أحدث المشاريع التي أطلقتها الشركة، حيث يقدم وحدات سكنية تتنوع بين الشقق والفيلات. يتميز المشروع بتصميمه الفريد وموقعه الاستراتيجي، مما يجعله مكانًا مثاليًا للعيش.
+      </p>
+    </section>
+
+    <!-- Capital Importance -->
+    <section>
+      <h2 class="section-title">أهمية العاصمة الإدارية الجديدة</h2>
+      <p class="text-block">
+        تعتبر العاصمة الإدارية الجديدة من المشاريع القومية الكبرى في مصر، حيث تهدف إلى تخفيف الضغط عن القاهرة. تقع لافيستا سيتي في قلب العاصمة الإدارية الجديدة، مما يتيح للسكان الوصول إلى المرافق الحكومية والتجارية بسهولة.
+      </p>
+    </section>
+
+    <!-- Living Experience -->
+    <section style="background: white; border-radius: 24px; padding: 60px;">
+      <h2 class="section-title">تجربة المعيشة في لافيستا</h2>
+      <p class="text-block">
+        تقدم شركة لافيستا تجربة معيشة فريدة من نوعها، حيث يضمن الكمبوند بيئة آمنة ومريحة لكافة أفراد العائلة. بالإضافة إلى ذلك، توفر الشركة خيارات سكنية متنوعة تناسب جميع الميزانيات.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section>
+      <h2 class="section-title">خدمات ومرافق إضافية</h2>
+      <div class="features-list">
+        <div class="feature-item">مراكز تجارية</div>
+        <div class="feature-item">مرافق رياضية</div>
+        <div class="feature-item">أمن وحراسة</div>
+        <div class="feature-item">نادي صحي وسبا</div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <h2>ابدأ رحلتك نحو حياة فاخرة اليوم</h2>
+      <a href="tel:+201000000000" class="btn">اتصل بنا الآن</a>
+    </div>
+
+  </div>
+
+  <!-- Floating Buttons -->
+  <div style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 1000;">
+    <a href="https://wa.me/201000000000" target="_blank"
+       style="width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: all 0.3s;">
+      💬
+    </a>
+    <a href="tel:+201000000000"
+       style="width: 56px; height: 56px; border-radius: 50%; background: #011E60; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 22px; box-shadow: 0 4px 12px rgba(1,30,96,0.3); transition: all 0.3s;">
+      📞
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2024 La Vista Developments – جميع الحقوق محفوظة</p>
+    <p>لافيستا: تجربة سكنية فريدة في قلب العاصمة الإدارية الجديدة</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="تعرّف على قرية لافيستا العين السخنة – واحدة من أبرز القرى السياحية على البحر الأحمر، تقدم شاليهات وفيلات بإطلالات بحرية مباشرة، خدمات متكاملة، وموقع استراتيجي قريب من القاهرة.">
+  <title>لافيستا العين السخنة | شاليهات وفيلات للبيع على البحر الأحمر</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #011E60;
+      --primary-light: #023399;
+      --accent: #2A5B87;
+      --light: #f8fbff;
+      --white: #ffffff;
+      --gray: #777;
+      --dark: #222;
+      --shadow: 0 10px 30px rgba(1, 30, 96, 0.12);
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Back Button */
+    .back-btn {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .back-btn a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 1.05rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 75vh;
+      background: linear-gradient(rgba(1, 30, 96, 0.75), rgba(1, 30, 96, 0.85)), url('https://la-vistaproperties.com/assets/img/projects/gardens.webp') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      border-radius: 0 0 40px 40px;
+      margin-bottom: 60px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+    }
+
+    /* Section Base */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 40px;
+      position: relative;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .text-center {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 50px;
+      font-size: 1.15rem;
+      color: #333;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border-top: 4px solid var(--primary);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 40px rgba(1, 30, 96, 0.2);
+    }
+
+    .feature-card h3 {
+      color: var(--primary);
+      margin-top: 15px;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    /* Projects List */
+    .projects-list {
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      margin: 40px auto;
+      max-width: 900px;
+    }
+
+    .projects-list ul {
+      list-style: none;
+      padding: 0;
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .projects-list ul {
+        columns: 1;
+      }
+    }
+
+    .projects-list li {
+      margin-bottom: 14px;
+      break-inside: avoid;
+      font-size: 1.15rem;
+    }
+
+    .projects-list li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      margin-left: 8px;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 30px;
+      margin: 70px 0;
+    }
+
+    .cta-section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 25px;
+      font-weight: 800;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 16px 48px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      margin-top: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--gray);
+      font-size: 1rem;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1.1rem; }
+      .section-title { font-size: 1.8rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .btn { padding: 14px 36px; font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Banner -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>قرية لافيستا العين السخنة</h1>
+      <p>واحدة من أبرز القرى السياحية على البحر الأحمر – هدوء، رفاهية، واستثمار مضمون</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Back Button -->
+    <div class="back-btn">
+      <a href="https://la-vistaproperties.com">← العودة إلى الرئيسية</a>
+    </div>
+
+    <!-- Intro -->
+    <section>
+      <h2 class="section-title">لماذا لافيستا العين السخنة؟</h2>
+      <p class="text-center">
+        تُعد قرية <strong>لافيستا العين السخنة</strong> واحدة من أبرز وأشهر القرى السياحية في منطقة البحر الأحمر، حيث تجمع بين الموقع المتميز على شاطئ خليج السويس، والتصميمات المعمارية الراقية، بالإضافة إلى الخدمات المتكاملة التي تجعلها الوجهة المثالية لقضاء عطلة صيفية مميزة أو حتى الاستثمار العقاري. إذا كنت تبحث عن مكان يجمع بين الهدوء والرفاهية، فإن <strong>لافيستا السخنة</strong> ستكون خيارك الأمثل.
+      </p>
+    </section>
+
+    <!-- Location -->
+    <section style="background: white; border-radius: 24px; padding: 60px;">
+      <h2 class="section-title">الموقع الاستراتيجي</h2>
+      <p class="text-center">
+        يمتاز موقع <strong>لافيستا العين السخنة</strong> بالقرب من القاهرة، حيث لا يبعد أكثر من ساعة ونصف فقط بالسيارة عبر طريق القطامية – العين السخنة. هذا الموقع جعلها وجهة أولى للعطلات القصيرة أو الإجازات الطويلة. كما أن موقعها على طول شاطئ البحر الأحمر يمنح الزائرين فرصة للاستمتاع بمياه فيروزية نقية وشواطئ رملية ناعمة.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="section-title">المشروعات التابعة في العين السخنة</h2>
+      <div class="projects-list">
+        <ul>
+          <li>لافيستا 1 العين السخنة</li>
+          <li>لافيستا 3 العين السخنة</li>
+          <li>لافيستا 4 العين السخنة</li>
+          <li>لافيستا 5 العين السخنة</li>
+          <li>لافيستا 6 العين السخنة</li>
+          <li>لافيستا 7 العين السخنة</li>
+          <li>لافيستا توباز السخنة</li>
+          <li>لافيستا جاردنز السخنة</li>
+        </ul>
+      </div>
+      <p class="text-center">
+        كل هذه المشروعات تقدم تجارب متنوعة، لكن جميعها تشترك في تقديم <strong>شاليهات وفيلات بإطلالات مباشرة على البحر</strong>، مع مساحات خضراء واسعة وخدمات متكاملة.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section>
+      <h2 class="section-title">المرافق والخدمات</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>شواطئ خاصة</h3>
+        </div>
+        <div class="feature-card">
+          <h3>حمامات سباحة متعددة</h3>
+        </div>
+        <div class="feature-card">
+          <h3>مطاعم وكافيهات</h3>
+        </div>
+        <div class="feature-card">
+          <h3>أمن وحراسة 24/7</h3>
+        </div>
+        <div class="feature-card">
+          <h3>ملاعب رياضية</h3>
+        </div>
+        <div class="feature-card">
+          <h3>مساحات خضراء شاسعة</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment -->
+    <section style="background: white; border-radius: 24px; padding: 60px;">
+      <h2 class="section-title">مميزات الاستثمار</h2>
+      <p class="text-center">
+        يعتبر الاستثمار في <strong>قريه لافيستا العين السخنه</strong> فرصة مميزة، خاصة مع الطلب المتزايد على شاليهات العين السخنة. القرى مثل <strong>لافيستا 6</strong> و<strong>لافيستا جاردنز</strong> تتميز بارتفاع قيمتها الاستثمارية مع مرور الوقت، بفضل الموقع الاستراتيجي وجودة التصميم والخدمات.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <h2>احجز شاليهك على البحر اليوم</h2>
+      <a href="tel:+201050564000" class="btn">اتصل بنا الآن</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2024 La Vista Developments – جميع الحقوق محفوظة</p>
+    <p>قرية لافيستا العين السخنة | شاليهات وفيلات للبيع على البحر الأحمر</p>
+  </footer>
+  
+
+</body>
+</html>

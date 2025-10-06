@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="اكتشف مشروع لافيستا سيتي العاصمة الادارية الجديدة، كمبوند متكامل يقدم شقق وفيلات للبيع بمساحات متنوعة وخدمات فاخرة ضمن أهم مشروعات العاصمة">
+  <title>لافيستا سيتي العاصمة الادارية الجديدة | شقق وفيلات للبيع</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #011E60;
+      --primary-light: #023399;
+      --accent: #2A5B87;
+      --light: #f8fbff;
+      --white: #ffffff;
+      --gray: #777;
+      --dark: #222;
+      --shadow: 0 10px 30px rgba(1, 30, 96, 0.12);
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: linear-gradient(rgba(1, 30, 96, 0.75), rgba(1, 30, 96, 0.85)), url('https://la-vistaproperties.com/assets/img/projects/city.webp') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      border-radius: 0 0 40px 40px;
+      margin-bottom: 60px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      font-weight: 400;
+    }
+
+    /* Section Base */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 40px;
+      position: relative;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .text-center {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 50px;
+      font-size: 1.15rem;
+      color: #333;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border-top: 4px solid var(--primary);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 40px rgba(1, 30, 96, 0.2);
+    }
+
+    .feature-card h3 {
+      color: var(--primary);
+      margin-top: 15px;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    /* Units */
+    .units-list {
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      margin: 40px auto;
+      max-width: 800px;
+    }
+
+    .units-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .units-list li {
+      padding: 14px 0;
+      font-size: 1.2rem;
+      border-bottom: 1px dashed #eee;
+      display: flex;
+      align-items: center;
+    }
+
+    .units-list li:last-child {
+      border: none;
+    }
+
+    .units-list li::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-left: 12px;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 30px;
+      margin: 70px 0;
+    }
+
+    .cta-section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 25px;
+      font-weight: 800;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 16px 48px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      margin-top: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--gray);
+      font-size: 1rem;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.3rem; }
+      .hero p { font-size: 1.1rem; }
+      .section-title { font-size: 1.8rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .btn { padding: 14px 36px; font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  
+  
+  <div style="text-align: center; margin: 20px 0;">
+    <a href="https://la-vistaproperties.com" 
+       style="display: inline-block; background: #011E60; color: white; text-decoration: none; 
+              padding: 12px 30px; border-radius: 50px; font-family: 'Tajawal', sans-serif; 
+              font-size: 1.1rem; box-shadow: 0 4px 12px rgba(1,30,96,0.2); transition: all 0.3s;">
+      ← العودة إلى الرئيسية
+    </a>
+  </div>
+  <!-- Hero Banner -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>لافيستا سيتي – العاصمة الإدارية الجديدة</h1>
+      <p>أول مشروع متكامل من لافيستا يجمع كل احتياجات الحياة في مجتمع واحد</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Intro -->
+    <section>
+      <h2 class="section-title">مشاريع العاصمة الإدارية الجديدة</h2>
+      <p class="text-center">
+        يُعد <strong>لافيستا سيتي العاصمة الادارية</strong> من أبرز وأهم المشروعات السكنية التي تم إطلاقها داخل العاصمة الإدارية الجديدة، حيث يجمع بين التصميم العصري، الموقع الاستراتيجي، والخدمات المتكاملة، مما يجعله واحدًا من <strong>أهم المشروعات في العاصمة الادارية الجديدة</strong>.
+      </p>
+    </section>
+
+    <!-- Location -->
+    <section style="background: white; border-radius: 24px; padding: 60px;">
+      <h2 class="section-title">الموقع المميز</h2>
+      <p class="text-center">
+        يقع <strong>لا فيستا سيتي</strong> على <strong>النهر الأخضر</strong> بالقرب من <strong>محور بن زايد الجنوبي</strong>، وكمبوند هايد بارك، وكمبوند سيتي جيت، ومشروع ميفيدا على الدائري الأوسطي امتداد للجولدن سكوير.
+      </p>
+    </section>
+
+    <!-- Units -->
+    <section>
+      <h2 class="section-title">الوحدات المتاحة</h2>
+      <div class="units-list">
+        <ul>
+          <li>فيلات مستقلة</li>
+          <li>توين هاوس</li>
+          <li>تاون هاوس</li>
+        </ul>
+      </div>
+      <p class="text-center">
+        جميع الوحدات مصممة بمعايير عالمية، مع إطلالات على <strong>مساحات خضراء واسعة</strong> لحياة هادئة ومريحة.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section>
+      <h2 class="section-title">الخدمات والمرافق</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>مستشفى</h3>
+        </div>
+        <div class="feature-card">
+          <h3>مدرستان دوليتان</h3>
+        </div>
+        <div class="feature-card">
+          <h3>نادي رياضي</h3>
+        </div>
+        <div class="feature-card">
+          <h3>حمامات سباحة</h3>
+        </div>
+        <div class="feature-card">
+          <h3>منطقة إدارية</h3>
+        </div>
+        <div class="feature-card">
+          <h3>نادٍ رئيسي</h3>
+        </div>
+        <div class="feature-card">
+          <h3>تصميم أوروبي عصري</h3>
+        </div>
+        <div class="feature-card">
+          <h3>مناطق تجارية</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment -->
+    <section style="background: white; border-radius: 24px; padding: 60px;">
+      <h2 class="section-title">لماذا تستثمر في لافيستا سيتي؟</h2>
+      <p class="text-center">
+        مع تزايد الطلب على <strong>مشروعات العاصمة الادارية الجديدة</strong>، يُعد شراء وحدة في <strong>لافيستا سيتي</strong> فرصة استثمارية قوية، حيث ترتفع قيمة العقارات باستمرار بفضل الموقع المميز والبنية التحتية المتقدمة.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <h2>ابدأ رحلتك نحو حياة فاخرة اليوم</h2>
+      <a href="tel:+201000000000" class="btn">اتصل بنا الآن</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2024 La Vista Developments – جميع الحقوق محفوظة</p>
+    <p>لافيستا سيتي العاصمة الادارية الجديدة | شقق وفيلات للبيع في كمبوند لافيستا سيتى</p>
+     <!-- Floating WhatsApp Button -->
+     <a href="https://wa.me/201050564000?text=Hello%2C%20I%20would%20like%20to%20get%20more%20details%20about%20La%20Vista%20projects."
+     target="_blank" class="floating-btn whatsapp-btn" aria-label="Contact us on WhatsApp">
+     <i class="bi bi-whatsapp"></i>
+   </a>
+
+
+
+   <!-- Floating Call Button -->
+   <a href="tel:+201050564000" class="floating-btn call-btn" id="call" aria-label="اتصل بنا الآن">
+     <i class="bi bi-telephone-fill"></i>
+   </a>
+  </footer>
+
+</body>
+</html>
